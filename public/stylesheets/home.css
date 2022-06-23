@@ -1,0 +1,49 @@
+body {
+	height: 100vh;
+	background-image: url("../Images/foodtrucks2.PNG");
+	background-size: cover;
+	background-position: center;
+}
+
+.cover-container {
+	max-width: 60vw;
+}
+
+.nav-link {
+	color: whitesmoke;
+	font-size: larger;
+	font-weight: 700;
+}
+
+.nav-link:hover {
+	color: red;
+	border-bottom: 3px solid white;
+}
+
+#homeBtn {
+	color: red;
+	background-color: burlywood;
+}
+
+.lead{
+	/* background-color: rgba(116, 116, 114, 0.05); */
+	font-weight: 600;
+	font-size: 22px;
+
+}
+
+#home-container{
+	color: red;
+	font-family: 'Calligraffitti', cursive;
+	margin-top: 50px;
+}
+
+#home-title{
+	font-size: 72px;
+	
+}
+
+#home-header{
+	box-sizing: content-box;
+	height: 100px;
+}

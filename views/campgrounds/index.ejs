@@ -1,0 +1,31 @@
+<%= layout('layouts/boilerplate') %> 
+    <div id="map" style="width: 1000px; height: 500px;"></div>
+    <h1>Hotspots</h1>
+    <ul>
+    <% for( let camp of camps) { %>
+        <div class="card my-5" style="width: 50rem" style="height: 15rem">
+            <div class="d-flex">
+                <div style="width: 25rem">
+                    <img class="img-fluid" src="<%= camp.images[0].url %>" alt="Card image cap" style="height: 15rem; width: 15rem" max-width: 100% height: auto>
+                </div>
+                
+                <div class="card-body">
+                    <h5 class="card-title"><%= camp.title %></h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                        content.</p>
+                    <p class="card-text">
+                        <small class="muted"><%= camp.location %></small>
+                    </p>
+                    <a href="/campgrounds/<%= camp._id %>" class="btn btn-primary">Details</a>
+                </div>
+            </div>
+        </div>
+        <% } %>
+    </ul>
+    <script>
+        const mapToken = '<%= process.env.MY_ACCESS_TOKEN %>';
+        const campgrounds = {features: <%- JSON.stringify(camps) %>};
+    </script>
+    <script src="/javascripts/clusterMap.js"></script>
+
+    
